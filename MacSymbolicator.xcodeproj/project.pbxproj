@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		722E34122ECB41960072B158 /* FileShareSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722E34112ECB41900072B158 /* FileShareSearch.swift */; };
 		B200A3AA1EF23244006CD542 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B200A3AC1EF23244006CD542 /* Main.storyboard */; };
 		B2036AD128DDDFBB00ED1268 /* ReportFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2036AD028DDDFBB00ED1268 /* ReportFileTests.swift */; };
 		B2036AD328DDE4A500ED1268 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2036AD228DDE4A500ED1268 /* TestFile.swift */; };
@@ -103,6 +104,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		722E34112ECB41900072B158 /* FileShareSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileShareSearch.swift; sourceTree = "<group>"; };
 		B200A3AB1EF23244006CD542 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2036AD028DDDFBB00ED1268 /* ReportFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFileTests.swift; sourceTree = "<group>"; };
 		B2036AD228DDE4A500ED1268 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		B289E0A023F5F72A0019C28B /* DSYM Search */ = {
 			isa = PBXGroup;
 			children = (
+				722E34112ECB41900072B158 /* FileShareSearch.swift */,
 				B289E0A123F5F7350019C28B /* DSYMSearch.swift */,
 				B289E0A323F5F77C0019C28B /* SpotlightSearch.swift */,
 				B21CA7E71EFCB61500AD9B75 /* FileSearch.swift */,
@@ -543,6 +546,7 @@
 				B236468E2618214F00AB9486 /* StackFrame.swift in Sources */,
 				B29D4B81290C421300E9D1A1 /* BinaryImageMap.swift in Sources */,
 				B27931341EF2875E00DDAA7D /* DropZone.swift in Sources */,
+				722E34122ECB41960072B158 /* FileShareSearch.swift in Sources */,
 				B25A35CD1EF9211F00F52E00 /* Symbolicator.swift in Sources */,
 				B21CA7E81EFCB61500AD9B75 /* FileSearch.swift in Sources */,
 				B2C229231EF223C50015AB33 /* AppDelegate.swift in Sources */,
@@ -596,7 +600,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mahdi.MacSymbolicatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -622,7 +626,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mahdi.MacSymbolicatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -793,13 +797,14 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 8;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = PP5UYHJQCD;
+				DEVELOPMENT_TEAM = Z93WQ2G9RW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mahdi.MacSymbolicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -819,13 +824,14 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 8;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = PP5UYHJQCD;
+				DEVELOPMENT_TEAM = Z93WQ2G9RW;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 2.6;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mahdi.MacSymbolicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";

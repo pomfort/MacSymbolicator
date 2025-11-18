@@ -471,6 +471,9 @@ extension DropZone {
     }
 
     private func validFileURL(_ url: URL) -> Bool {
+        if url.path(percentEncoded: false).starts(with: "/Volumes/SoftwareReleases/_DebugSymbols") {
+            return true
+        }
         return fileTypesPredicate.evaluate(with: url.path)
     }
 }

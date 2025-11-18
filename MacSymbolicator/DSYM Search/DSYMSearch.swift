@@ -51,10 +51,27 @@ class DSYMSearch {
         logHandler logMessage: @escaping LogHandler,
         callback: @escaping Callback
     ) {
-        logMessage("Searching Spotlight for UUIDs: \(uuids)")
 
         let expectedUUIDs = Set<String>(uuids)
 
+        FileShareSearch().search(forUUIDs: expectedUUIDs, logHandler: logMessage) { results, finished in
+            if let results {
+                 _ = processSearchResults(
+                     results,
+                     expectedUUIDs: expectedUUIDs,
+                     finished: finished,
+                     logHandler: logMessage,
+                     callback: callback
+                 )
+             } else {
+                 logMessage("File server query failure.")
+                 _ = ProcessingResult(missingUUIDs: expectedUUIDs)
+             }
+        }
+
+        /*
+
+        logMessage("Searching Spotlight for UUIDs: \(uuids)")
         spotlightSearch.search(forUUIDs: uuids) { results in
             // Processing of results and file searches should be on a background thread to not block main
             DispatchQueue.global().async {
@@ -115,6 +132,8 @@ class DSYMSearch {
                 logMessage("Missing UUIDs: \(missingUUIDs)")
             }
         }
+
+         */
     }
 
     private init() {}

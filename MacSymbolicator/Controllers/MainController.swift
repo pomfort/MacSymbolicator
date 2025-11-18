@@ -153,9 +153,18 @@ class MainController {
 
             DispatchQueue.main.async {
                 if success {
-                    self.textWindowController.text = symbolicator.symbolicatedContent ?? ""
-                    self.textWindowController.defaultSaveURL = reportFile.symbolicatedContentSaveURL
-                    self.textWindowController.showWindow()
+
+                    if let text = symbolicator.symbolicatedContent {
+                        try? text.write(to: reportFile.symbolicatedContentSaveURL, atomically: true, encoding: .utf8)
+                        NSWorkspace.shared.open(
+                            [reportFile.symbolicatedContentSaveURL],
+                            withApplicationAt: .init(filePath: "/System/Applications/Utilities/Console.app"),
+                            configuration: NSWorkspace.OpenConfiguration()
+                        )
+                    }
+//                    self.textWindowController.text = symbolicator.symbolicatedContent ?? ""
+//                    self.textWindowController.defaultSaveURL = reportFile.symbolicatedContentSaveURL
+//                    self.textWindowController.showWindow()
                 } else {
                     let alert = NSAlert()
                     alert.informativeText = "Symbolication failed. See logs for more info."
